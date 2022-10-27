@@ -1,0 +1,68 @@
+body {
+  margin: 43px 0 0 0;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #313131;
+  border-radius: 3px;
+}
+.header li {
+  display: inline-block;
+  float: left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #313131;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+li a {
+  display: block;
+  color: #D4D3D3;
+  text-align: center;
+  padding: 15px 45px;
+  text-decoration: none;
+  font-family: "SF UI Display";
+  font-size: 13px;
+  margin: 0px 10px;
+  transition: all 0.4s linear;
+}
+
+li a:hover {
+  color: white;
+  background-color: #252525;
+}
+.Logo{
+  background-image: url("Secret Photografer Logo.png");
+  background-repeat: no-repeat;
+  background-size: 140px;
+  background-position: center center;
+  width:100px;
+  margin: 8px 50px 0px 130px;
+}
+.logo:hover, .lupa:hover{
+	opacity: .80;
+	cursor: pointer;
+	background-color: #313131;
+}
+.lupa{
+  width: 20px;
+  margin: 12px 0 0 20px;
+}
+.Copyright{
+  font-family: "SF UI Display";
+  font-size: 14px;
+  color: #919191;
+  text-align: center;
+  width: 100%;
+  margin: 60 auto 30;
+}

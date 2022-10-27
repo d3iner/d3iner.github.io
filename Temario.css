@@ -1,0 +1,79 @@
+h1{
+  font-family: "SF UI Display";
+  font-size: 90px;
+  color: #313131;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px; 
+  margin-bottom: 50px;
+}
+
+.Temario{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.img1{
+  margin: 10 15 10 auto ;
+}
+.img2{
+  margin: 10 auto 10 15;
+}
+.img3{
+  width: 92%;
+  margin-top: 20px;
+  margin-bottom: 0px
+
+}
+
+.img4{
+  width: 10%;
+  margin-top: 20px;
+  margin-bottom: 0px
+  
+}
+
+.Cinematica{
+  font-family: "SF UI Display";
+  font-size: 20px;
+  color: #fffff;
+  position: absolute;
+  left: -12%;
+  text-decoration-line: none;
+  margin-top: -305px;
+  padding: 19% 14%;
+}
+.Leyesdenewton{
+  font-family: "SF UI Display";
+  font-size: 20px;
+  color: #fa2ahh;
+  position: absolute;
+  right: -13%;
+  text-decoration-line: none;
+  margin-top: -305px;
+  padding: 19% 102px;
+}
+.Aplicacion{
+  font-family: "SF UI Display";
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  left: -340px;
+  margin-top: 20px;
+  text-decoration-line: none;
+  display: flex;
+  text-align: center;
+  padding: 20% 394px 18%; 
+}
+.Modelos{
+  font-family: "SF UI Display";
+  font-size: 10px;
+  color: blue;
+  position: absolute;
+  right: 0px;
+  margin-top: 20px;
+  text-decoration-line: none;
+  display: flex;
+  text-align: center;
+  padding: 20% 394px 18%; 
+}

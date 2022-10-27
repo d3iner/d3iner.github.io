@@ -1,0 +1,52 @@
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 200%;
+    margin-top: 0;
+    position: static;
+    background-color: white;
+    animation: cambio 25s infinite alternate;
+}
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+.slider img {
+   width: 20%;
+}
+@keyframes cambio {
+
+	0% {margin-left: 0;}
+	20%{margin-left: 0;}
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}
+h1{
+	text-align: center;
+	font-family: "SF UI Display";
+	font-size: 50px;
+	color: #313131;
+	position: static;
+	margin-top: 50px;
+}
+p {
+	text-align: center;
+	font-family: "SF UI Display";
+	font-size: 20px;
+	color: #313131;
+	position: static;
+	width: 500px;
+	margin: 50px auto;
+}
