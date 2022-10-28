@@ -14,51 +14,53 @@ h1{
   align-items: center;
 }
 .img1{
-  width: 40%;
+  width: 30%;
   margin-left: 55%;
 }
 .img2{
-  width: 40%;
-  padding-right: 40%;
-  margin-top: -330px;
+  width: 30%;
+  padding-left: 5%;
+  margin-top: -250px;
 }
 .img3{
-  width: 40%;
- padding-left: 50%;
+  width: 30%;
+ padding-left: 55%;
+ margin-top: 80px;
 }
 
 .img4{
-  width: 40%;
+  width: 30%;
+  padding-left: 5%;
   margin-top: -200px;
 }
 
 .Cinematica{
   font-family: "SF UI Display";
   font-size: 50px;
-  color: #fffff;
+  color: transparent;
   position:absolute;
   left: -12%;
   text-decoration-line: none;
-  margin-top: -520px;
+  margin-top: -420px;
   padding: 20% 20%;
 }
 .Leyesdenewton{
   font-family: "SF UI Display";
-  font-size: 50px;
-  color: #fa2ahh;
+  font-size: 40px;
+  Color: transparent;
   position: absolute;
-  right: -1%;
+  right: 0%;
   text-decoration-line: none;
-  margin-top: -305px;
-  padding: 19% 102px;
+  margin-top: -450px;
+  padding: 24% 250px;
 }
 .Aplicacion{
   font-family: "SF UI Display";
   font-size: 20px;
-  color: red;
-  position: absolute;
-  left: -310px;
-  margin-top: -330px;
+  color: transparent; 
+    position: absolute;
+  left: -280px;
+  margin-top: -380px;
   text-decoration-line: none;
   display: flex;
   text-align: center;
@@ -67,12 +69,15 @@ h1{
 .Modelos{
   font-family: "SF UI Display";
   font-size: 80px;
-  color: blue;
+  color: transparent; 
   position: absolute;
-  right: -220px;
-  margin-top: -530px;
+  right: -120px;
+  margin-top: -450px;
   text-decoration-line: none;
   display: flex;
   text-align: center;
   padding: 20% 394px 18%; 
 }
+
+
+
