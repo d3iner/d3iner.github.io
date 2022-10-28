@@ -1,3 +1,51 @@
-h1{
-	text-align: center;
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; 
+  }
+  
+body{
+	margin:auto;
+	background-color: #EEEDF5;
+	font-family: Georgia, 'Times New Roman';
+	
 }
+
+h1{	
+	background-color: #313131;;
+	padding: 30px 0;
+	color:white;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: auto;	
+}
+
+h2{
+	display: flex;
+	padding: 40px 0;
+	color:#080808;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+	justify-content: space-evenly;
+	
+}
+
+p{
+	margin: 0;
+	padding: 0 30px;
+	text-align: justify;
+	color: #252424;
+	
+
+}
+
+.Copyright{
+	font-size: 15px;
+	text-align: center;
+    margin: 170px;
+    padding-left: 12px;
+    color: #080808;
+}
+
