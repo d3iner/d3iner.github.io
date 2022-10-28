@@ -12,7 +12,7 @@ body{
 }
 
 h1{	
-	background-color: #1B2324;
+	background-color: #313131;
 	padding: 30px 0;
 	color:#fff;
 	font-size: 40px;
@@ -29,9 +29,9 @@ p{
 	
 }
 
-footer{
+.Copyright{
+	font-size: 20px;
 	text-align: center;
-    font-size: 10px;
     margin: 300px 0 0 0;
     color: #080808;
 }

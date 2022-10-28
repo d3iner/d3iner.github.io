@@ -13,7 +13,7 @@ body{
 }
 
 h1{	
-	background-color: #1B2324;;
+	background-color: #313131;;
 	padding: 30px 0;
 	color:white;
 	font-size: 50px;
@@ -23,11 +23,11 @@ h1{
 
 h2{
 	display: flex;
-	padding: 80px 0;
-	color:#fff;
+	padding: 40px 0;
+	color:#080808;
 	font-size: 20px;
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	justify-content: space-evenly;
 	
 }
@@ -41,20 +41,10 @@ p{
 
 }
 
-footer{
-    background: #1B2324;
-    padding: -20px  -40px 0px;
-    margin: auto;
-    overflow:hidden;
-}
-
-footer{
-	color: #090000;
-}
-
-footer{
+.Copyright{
+	font-size: 20px;
 	text-align: center;
-    font-size: 10px;
-    margin: 300px 0 0 0;
+    margin: 200px 10px 12px 20px;
     color: #080808;
 }
+
