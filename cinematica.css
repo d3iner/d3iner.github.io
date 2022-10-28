@@ -1,3 +1,32 @@
-h1{
-	text-align: center;
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; 
+  }
+  
+body{
+	margin:auto;
+	background-color: #6c6b6e;
+	font-family: Georgia, 'Times New Roman';
+	
 }
+
+h1{	
+	background-color: rgb(5, 0, 160);
+	padding: 60px 0;
+	color:#fff;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: auto;	
+}
+
+p{
+	margin: 0;
+	padding: 0 50px;
+	margin: 50px 0 0 0;
+	text-align: justify;
+	color: #252424;
+	
+
+}
+
