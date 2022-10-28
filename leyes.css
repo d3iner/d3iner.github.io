@@ -1,3 +1,60 @@
-h1{
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; 
+  }
+  
+body{
+	margin:auto;
+	background-color: #5e5b5b;
+	font-family: Georgia, 'Times New Roman';
+	
+}
+
+h1{	
+	background-color: darkred;
+	padding: 60px 0;
+	color:#000000;
+	font-size: 50px;
 	text-align: center;
+	margin-bottom: auto;	
+}
+
+h2{
+	display: flex;
+	padding: 80px 0;
+	color:#fff;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+	justify-content: space-evenly;
+	
+}
+
+p{
+	margin: 0;
+	padding: 0 30px;
+	text-align: justify;
+	color: #252424;
+	
+
+}
+
+footer{
+    background: #bd0707;
+    padding: 40px 0 30px 0;
+    margin: auto;
+    overflow:hidden;
+}
+
+footer{
+	color: #090000;
+}
+
+footer{
+	text-align: center;
+    font-size: 10px;
+    margin: 300px 0 0 0;
+    color: #080808;
 }
