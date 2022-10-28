@@ -6,16 +6,16 @@
   
 body{
 	margin:auto;
-	background-color: #6c6b6e;
+	background-color: #EEEDF5;
 	font-family: Georgia, 'Times New Roman';
 	
 }
 
 h1{	
-	background-color: rgb(5, 0, 160);
-	padding: 60px 0;
+	background-color: #1B2324;
+	padding: 30px 0;
 	color:#fff;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 	margin-bottom: auto;	
 }
