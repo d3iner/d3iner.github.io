@@ -13,19 +13,18 @@
 
 	display: flex;
     height:350px;
-    width: 105%;
+    width: 100%;
 	color: #fff;
 	font-size: 30px;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
 }
 
 .info{
 	color:#050505;
     font-size: 20px;
-	padding: 60px 0;
+	padding: 80px 10px;
     text-align: center;
     margin-bottom: 45px;
 }
@@ -41,7 +40,42 @@ header{
 	position: relative;
 }
 
-.wave{
+.ilus{
+	display: flex;
+	padding: 25px;
+	color:#000000;
+	margin-right: 60px;
+}
+
+.contend{
+	
+	display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	flex-direction: column;
+}
+
+.contend h2{
+	font-size:150%;
+	padding-left: 11%;
+}
+
+.contend h3{
+	font-size:100%;
+	text-align: justify;
+	padding-left: 35%;
+}
+
+.contend p{
+	font-size:90%;
+	text-align: justify;
+	padding-left: 35%;
+}
+
+	.wave{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
