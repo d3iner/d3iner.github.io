@@ -39,12 +39,29 @@ header{
 	background-attachment: fixed;
 	position: relative;
 }
+nav{
+    text-align:right;
+    padding:30px 30px 0 0;
+}
+nav > a{
+color: #fff;
+font-weight: 300;
+text-decoration: none;
+margin-right: 10px;
+}
 
+nav > a:hover{
+    text-decoration: underline;
+}
 .ilus{
 	display: flex;
 	padding: 25px;
 	color:#000000;
 	margin-right: 60px;
+}
+
+.img{
+	padding-top: 80px;
 }
 
 .contend{
@@ -72,7 +89,9 @@ header{
 .contend p{
 	font-size:90%;
 	text-align: justify;
+	padding-top: 20px;
 	padding-left: 35%;
+	
 }
 
 	.wave{
