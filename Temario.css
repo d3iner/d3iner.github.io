@@ -8,76 +8,78 @@ h1{
   margin-bottom: 50px;
 }
 
-.Temario{
+.contenedor{
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor h2{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+  color:#000000;
+}
+
+.temario{
+  background: #f2f2f2;
+}
+
+.galeria-port{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagen-port{
+  width: 45%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 hsl(0, 0%, 100%);
+}
+
+.imagen-port > img{
   width: 100%;
+  height:100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hover-galeria{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: rgba(48, 48, 48, 0.936);
+  transition: transform.5s;
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-.img1{
-  width: 30%;
-  margin-left: 55%;
-}
-.img2{
-  width: 30%;
-  padding-left: 5%;
-  margin-top: -250px;
-}
-.img3{
-  width: 30%;
- padding-left: 55%;
- margin-top: 80px;
+  flex-direction: column;
+
 }
 
-.img4{
-  width: 30%;
-  padding-left: 5%;
-  margin-top: -200px;
+.hover-galeria img{
+  width: 50px;
 }
 
-.Cinematica{
-  font-family: "SF UI Display";
-  font-size: 50px;
-  color: transparent;
-  position:absolute;
-  left: -12%;
-  text-decoration-line: none;
-  margin-top: -420px;
-  padding: 20% 20%;
-}
-.Leyesdenewton{
-  font-family: "SF UI Display";
-  font-size: 40px;
-  Color: transparent;
-  position: absolute;
-  right: 0%;
-  text-decoration-line: none;
-  margin-top: -450px;
-  padding: 24% 250px;
-}
-.Aplicacion{
-  font-family: "SF UI Display";
-  font-size: 20px;
-  color: transparent; 
-    position: absolute;
-  left: -280px;
-  margin-top: -380px;
-  text-decoration-line: none;
-  display: flex;
-  text-align: center;
-  padding: 20% 394px 18%; 
-}
-.Modelos{
-  font-family: "SF UI Display";
-  font-size: 80px;
-  color: transparent; 
-  position: absolute;
-  right: -120px;
-  margin-top: -450px;
-  text-decoration-line: none;
-  display: flex;
-  text-align: center;
-  padding: 20% 394px 18%; 
+nav > a{
+color: #fff;
+font-weight: 300;
+text-decoration: none;
+margin-right: 10px;
 }
 
+.hover-galeria a{
+  font-size:25px ;
+  color:#000000;
+}
 
-
+.imagen-port:hover .hover-galeria{
+  transform: scale(1);
+}
