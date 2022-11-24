@@ -1,0 +1,66 @@
+<html>
+<head>
+  	<title>Mecanica newtoniana</title>
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Menú y Footer/Menú y Footer.css')}}">
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Temario.css')}}">
+  	
+	
+</head>
+
+    <ul class="header">
+        
+        <li><a href="/Mecanicanewtoniana">Inicio</a></li>
+        <li><a href="/Temario">Temario</a></li>
+        <li><a href="/Cursos">Cursos</a></li>
+        <li><a href="/Recursos">Recursos</a></li>
+        <li><a href="/Contactar">Contactar</a></li>
+        <li><img class="lupa" src="{{url_for('static', filename='Menú y Footer/lupa.png')}}"></li>
+  	</ul> 
+
+	  <section class="temario">
+        <div class="contenedor">
+            <h2 class="titulo">Temario</h2>
+            <div class="galeria-port">
+                <div class="imagen-port">
+                    <img src="{{url_for('static', filename='Temario/2.cine.jpg')}}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{{url_for('static', filename='Temario/seleccion.png')}}" alt="">
+						<nav>
+                        <a href="/Cinematica">Cinematica</a>
+						</nav>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{{url_for('static', filename='Temario/3.leyes.jpg')}}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{{url_for('static', filename='Temario/seleccion.png')}}" alt="">
+                        <nav>
+							<a href="/Leyesdenewton">Leyes de Newton</a>
+							</nav>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{{url_for('static', filename='Temario/4.aplicacion.jpg')}}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{{url_for('static', filename='Temario/seleccion.png')}}" alt="">
+                        <nav>
+							<a href="/Aplicacion">Aplicaciones de las Leyes de Newton</a>
+							</nav>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{{url_for('static', filename='Temario/1.Newton.jpg')}}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{{url_for('static', filename='Temario/seleccion.png')}}" alt="">
+                        <nav>
+							<a href="/Modelos">Modelo</a>
+							</nav>
+                    </div>
+                </div>
+			</div>
+    </section>  	
+	<footer>
+		<p class="Copyright">Copyright &copy 2022 Modelo de Ingenieria | Jimenez Pertuz Deiner | Perez Villa Aldahir | Robles Gonzalez Andres | Todos los derechos reservados.</p>
+	</footer>
+</body>
+</html>
