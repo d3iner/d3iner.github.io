@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file
 
 #objects
-from Graph import Graph, Graph2
+from Graph import Graph, Graph2, Graph3
 
 
 # Constants
@@ -23,8 +23,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("Temario.html")
-
+    return redirect(url_for("Mecanicanewtoniana"))
 
 
 @app.route("/Mecanicanewtoniana")
@@ -63,17 +62,35 @@ def Recursos():
 def Temario():
     return render_template("Temario.html")
 
-@app.route("/test")
+@app.route("/test", methods=["post"])
 def test():
+    array=[]
+    for i in request.form:
+        if request.form[i] == "":
+            array.append(1.0)
+        else:
+            array.append(float(request.form[i]))
     print("hi")
-    graph = Graph()
+    print(array)
+    graph = Graph(L1=array[0], L2=array[1], M1=array[2], M2=array[3])
     graph.show()
     return redirect(url_for("Leyesdenewton"))
 
-@app.route("/test2")
+@app.route("/test2", methods=["post"])
 def test2():
     print("hi")
-    graph = Graph2()
+    if request.form["force2"] == "":
+        force=0.0
+    else:
+        force=float(request.form["force2"])
+    graph = Graph2(range=force)
+    return redirect(url_for("Leyesdenewton"))
+
+@app.route("/test3", methods=["post"])
+def test3():
+    print("hi")
+    graph = Graph3(range=int(request.form["range3"]))
+    print(request.form["range3"])
     return redirect(url_for("Leyesdenewton"))
 
 
