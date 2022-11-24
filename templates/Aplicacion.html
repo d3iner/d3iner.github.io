@@ -4,16 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="aplicacion.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='aplicacion.css')}}">
 	<title> Aplicaciones de las leyes de Newton </title>
-	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 	<header>
 			<nav>
-				<a href="Temario.html">Inicio</a>
-				<a href="Leyesdenewton.html">Anterior</a>
-				<a href="Cinematica.html">Siguiente</a>
+				<a href="/Temario">Inicio</a>
+				<a href="/Leyesdenewton">Anterior</a>
+				<a href="/Cinematica">Siguiente</a>
 			</nav>
 		<section class="titulo">
 		<h1> Aplicaciones de las leyes de Newton </h1>
@@ -31,7 +30,7 @@
 		esas aplicaciones y hoy queremos compartirlas.</p>
 
 		<div class="img">
-            <img src="Slider/Primera ley.png" alt="">
+            <img src="{{url_for('static', filename='Slider/Primera ley.png')}}" alt="">
             <div class="contend">
                 <h2 class="title">PRIMERA LEY DE NEWTON: LEY DE LA INERCIA</h2>
 				<h3 class="subtitle"><i>Todo cuerpo permanecerá quieto, o se moverá en línea resta con 
@@ -49,7 +48,7 @@
             	</div>
         	</div>
 			<div class="img">
-				<img src="Slider/Segunda ley.png" alt="">
+				<img src="{{url_for('static', filename='Slider/Segunda ley.png')}}" alt="">
 				<div class="contend">
 					<h2 class="title">SEGUNDA LEY DE NEWTON: LEY DEL MOVIMIENTO</h2>
 					<h3 class="subtitle"><i>Para que un cuerpo obtenga una aceleración, es necesario que sobre 
@@ -64,7 +63,7 @@
 					</div>
 				</div>
 				<div class="img">
-					<img src="Slider/Tercera ley.png" alt="">
+					<img src="{{url_for('static', filename='Slider/Tercera ley.png')}}" alt="">
 					<div class="contend">
 						<h2 class="title">TERCERA LEY DE NEWTON: LEY DE ACCIÓN Y REACCIÓN</h2>
 						<h3 class="subtitle"><i>A toda acción le corresponde una reacción de igual magnitud 
