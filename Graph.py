@@ -18,8 +18,12 @@ class Graph:
     t_stop = 7.5  # how many seconds to simulate
     history_len = 500  # how many trajectory points to display
 
-    def __init__(self):
+    def __init__(self, L1=1.0, L2=1.0, M1=1.0, M2=1.0):
         print("hello world")
+        self.L1=L1
+        self.L2 = L2
+        self.M1 = M1
+        self.M2 = M2
         # create a time array from 0..t_stop sampled at 0.02 second steps
         self.dt = 0.01
         self.t = np.arange(0, self.t_stop, self.dt)
@@ -109,17 +113,45 @@ class Graph:
 
 class Graph2:
 
-    def __init__(self):
+    def __init__(self, range=1):
         Path = mpath.Path
 
         fig, ax = plt.subplots()
         pp1 = mpatches.PathPatch(
-            Path([(0, 0), (1, 0), (1, 1), (0, 0)],
+            Path([(0, 0), (range, 0), (range, range), (0, 0)],
                  [Path.MOVETO, Path.CURVE3, Path.CURVE3, Path.CLOSEPOLY]),
             fc="none", transform=ax.transData)
 
         ax.add_patch(pp1)
         ax.plot([0.75], [0.25], "ro")
         ax.set_title('The red point should be on the path')
+
+        plt.show()
+
+class Graph3:
+
+    def __init__(self, range=1):
+        fig, ax = plt.subplots()
+        plot=[]
+        plotReverse=[]
+        print(range)
+        i=0
+        while(i<=range):
+            print("works")
+            plot.append(i)
+            plotReverse.append(range-i)
+            i+=1
+
+        line1, = ax.plot(plot, label="Line 1", linestyle='--')
+        line2, = ax.plot(plotReverse, label="Line 2", linewidth=4)
+
+        # Create a legend for the first line.
+        first_legend = ax.legend(handles=[line1], loc='upper right')
+
+        # Add the legend manually to the current Axes.
+        ax.add_artist(first_legend)
+
+        # Create another legend for the second line.
+        ax.legend(handles=[line2], loc='lower right')
 
         plt.show()
