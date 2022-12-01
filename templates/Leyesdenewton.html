@@ -4,6 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Leyes.css')}}">
+	<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+	<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+	<py-env>
+- matplotlib
+- numpy
+	</py-env>
+
 	<title>Leyes de newton</title>
 </head>
 <body>
@@ -18,6 +26,8 @@ Para entenderlas mejor es necesario que conozcas los siguientes términos:
 
 *Aceleración: la puedes ver cuando un automóvil aumenta su velocidad o la disminuye. Estos cambios, que lo hacen ir más rápido o más lento, se llaman aceleración.
 </p>
+
+
 
 <h2>Primera ley o ley de la inercia	</h2>
 
@@ -40,21 +50,34 @@ es cero.<br>
 La primera ley de Newton, contiene implicaciones sobre la simetría fundamental del Universo, en la que el estado de movimiento en línea recta debe considerarse tan natural como el estado de reposo. Si un objeto está en reposo respecto de una marco de referencia, aparecerá estar moviéndose en línea recta para un observador que se esté moviendo igualmente en línea recta respecto del objeto. No hay forma de saber que marco de referencia es especial, de modo que, todos los marcos de referencias de velocidad rectilínea constante son equivalentes.</p>
 
 <form action="/test" method="POST">
-	<label for="large1">Longitud en metros en la cuerda 1 en metros</label>
-	<input type="number" name="large1" id="large1">
 
-	<label for="large2">Longitud en metros en la cuerda 2 en metros</label>
-	<input type="number" name="large2" id="large2">
-
-	<label for="mass1">Peso de la masa 1 en kilogramos</label>
-	<input type="number" name="mass1" id="mass1">
-
-	<label for="mass2">Peso de la masa 2 en kilogramos</label>
-	<input type="number" name="mass2" id="mass2">
-
-	<button type="submit">Example</button>
 </form>
 
+
+<div id="lineplot">
+<py-script output="lineplot">
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+x_tail = 0.1
+y_tail = 0.5
+x_head = 0.9
+y_head = 0.8
+dx = x_head - x_tail
+dy = y_head - y_tail
+
+fig, axs = plt.subplots(nrows=2)
+arrow = mpatches.FancyArrowPatch((x_tail, y_tail), (x_head, y_head),
+                                 mutation_scale=100)
+axs[0].add_patch(arrow)
+
+arrow = mpatches.FancyArrowPatch((x_tail, y_tail), (x_head, y_head),
+                                 mutation_scale=100)
+axs[1].add_patch(arrow)
+axs[1].set(xlim=(0, 2), ylim=(0, 2))
+fig
+</py-script>
+
+</div>
  <h2>Segunda ley o ley fundamental de la dinámica</h2>
 	
 <p>La aceleración de un objeto va a ser directamente proporcional a la fuerza que se le aplica a este.</p>
@@ -63,6 +86,38 @@ La primera ley de Newton, contiene implicaciones sobre la simetría fundamental 
 	<input type="number" name="force2" id="force2">
 	<button type="submit">Example</button>
 </form>
+
+<div id="lineplot2">
+<py-script output="lineplot2">
+from numpy import sin, cos
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import matplotlib.path as mpath
+import matplotlib.patches as mpatches
+
+
+class Graph2:
+
+    def __init__(self, range=1):
+        Path = mpath.Path
+
+        self.fig, ax = plt.subplots()
+        pp1 = mpatches.PathPatch(
+            Path([(0, 0), (range, 0), (range, range), (0, 0)],
+                 [Path.MOVETO, Path.CURVE3, Path.CURVE3, Path.CLOSEPOLY]),
+            fc="none", transform=ax.transData)
+
+        ax.add_patch(pp1)
+        ax.plot([0.75], [0.25], "ro")
+        ax.set_title('The red point should be on the path')
+
+graph2 = Graph2(range={{range2}})
+graph2.fig
+</py-script>
+
+</div>
+
 <h2>Tercera ley o principio de acción y reacción</h2>	
 
 <p>Toda acción tiene una reacción igual, pero en sentido contrario</p>
@@ -70,9 +125,57 @@ La primera ley de Newton, contiene implicaciones sobre la simetría fundamental 
 	<input type="range" min="1" max="10" name="range3">
 	<button type="submit">Example</button>
 </form>
+
+<div id="lineplot3">
+<py-script output="lineplot3">
+from numpy import sin, cos
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import matplotlib.path as mpath
+import matplotlib.patches as mpatches
+
+
+class Graph3:
+
+    def __init__(self, range=1):
+        self.fig, ax = plt.subplots()
+        plot=[]
+        plotReverse=[]
+        i=0
+        while(i<=range):
+            plot.append(i)
+            plotReverse.append(range-i)
+            i+=1
+
+        line1, = ax.plot(plot, label="Line 1", linestyle='--')
+        line2, = ax.plot(plotReverse, label="Line 2", linewidth=4)
+
+        # Create a legend for the first line.
+        first_legend = ax.legend(handles=[line1], loc='upper right')
+
+        # Add the legend manually to the current Axes.
+        ax.add_artist(first_legend)
+
+        # Create another legend for the second line.
+        ax.legend(handles=[line2], loc='lower right')
+
+graph3 = Graph3(range={{range3}})
+graph3.fig
+</py-script>
+
+</div>
+
 <footer>
 <p class="Copyright">Copyright &copy 2022 Modelo de Ingenieria | Jimenez Pertuz Deiner | Perez Villa Aldahir | Robles Gonzalez Andres | Todos los derechos reservados.</p>
 </footer>
+<iframe
+ width="800"
+    height="600"
+    src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_es.html">
+</iframe>
+
+
 </body>
 
 </html>
