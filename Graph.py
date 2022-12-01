@@ -63,7 +63,7 @@ class Graph:
         self.trace, = self.ax.plot([], [], '.-', lw=1, ms=2)
         self.time_template = 'time = %.1fs'
         self.time_text = self.ax.text(0.05, 0.9, '', transform=self.ax.transAxes)
-        self.history_x, self.history_y = deque(maxlen=self.history_len), deque(maxlen=self.history_len)
+        self.history_x, self.history_y = self.history_len, self.history_len
 
     def derivs(self, t, state):
         dydx = np.zeros_like(state)

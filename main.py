@@ -47,8 +47,8 @@ def Cursos():
     return render_template("Cursos.html")
 
 @app.route("/Leyesdenewton")
-def Leyesdenewton():
-    return render_template("Leyesdenewton.html")
+def Leyesdenewton(range2=1, range3=1):
+    return render_template("Leyesdenewton.html", range2=range2, range3=range3)
 
 @app.route("/Modelos")
 def Modelos():
@@ -83,15 +83,15 @@ def test2():
         force=0.0
     else:
         force=float(request.form["force2"])
-    graph = Graph2(range=force)
-    return redirect(url_for("Leyesdenewton"))
+    #graph = Graph2(range=force)
+    return Leyesdenewton(range2=request.form["force2"])
 
 @app.route("/test3", methods=["post"])
 def test3():
     print("hi")
-    graph = Graph3(range=int(request.form["range3"]))
-    print(request.form["range3"])
-    return redirect(url_for("Leyesdenewton"))
+    #graph = Graph3(range=int(request.form["range3"]))
+    #print(request.form["range3"])
+    return Leyesdenewton(range2=request.form["range3"])
 
 
 # Press the green button in the gutter to run the script.
